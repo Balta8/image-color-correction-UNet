@@ -65,13 +65,13 @@ streamlit run app.py
 - Upload a raw input image  
 - Get corrected output side-by-side with the original  
 - Option to download corrected image  
-
+```
 ---
 
 ## 📷 Example Results
 | Raw Input | Corrected Output |
 |-----------|------------------|
-| ![raw](docs/raw_example.png) | ![corrected](docs/corrected_example.png) |
+| ![raw](docs/raw_example.jpg) | ![corrected](docs/corrected_example.png) |
 
 ---
 
