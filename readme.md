@@ -70,7 +70,7 @@ streamlit run app.py
 
 ## 📷 Example Results
 | Raw Input | Corrected Output |
-|-----------|------------------|
+|---------------|---------------|
 | ![raw](docs/raw_example.jpg) | ![corrected](docs/corrected_example.png) |
 
 ---
