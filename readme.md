@@ -83,4 +83,4 @@ streamlit run app.py
 ---
 
 ## 👤 Author
-Developed by **Ahmed Balta**
+Developed by **Ahmed Balta & Ahmed Elnashar**
