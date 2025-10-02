@@ -5,7 +5,6 @@ It includes training, evaluation, and a **Streamlit web app** for easy inference
 
 ---
 
-
 ## 📂 Dataset
 We used the **MIT-Adobe FiveK dataset** (custom split):  
 👉 [Dataset on Kaggle](https://www.kaggle.com/datasets/ahmedmohmedbalta/mitabovefivek)  
@@ -26,14 +25,25 @@ We used the **MIT-Adobe FiveK dataset** (custom split):
 
 ## 📂 Project Structure
 ```
-Color_correction_UNet/
-│── UNet.py              # U-Net model
-│── train_unet.ipynb     # Training notebook
-│── app.py               # Streamlit inference app
-│── requirements.txt     # Dependencies
-│── README.md            # Project description
-│── models/
-│    └── best_model.pth  # Saved checkpoint (optional)
+project_root/
+├── src/                    # Source code directory
+│   ├── models/            # Model definitions
+│   │   ├── unet.py       # U-Net architecture
+│   │   └── blocks.py     # U-Net building blocks
+│   ├── utils/            # Utility functions
+│   │   └── transforms.py # Image transforms
+│   └── app/             # Application code
+│       └── main.py      # Streamlit application
+├── notebooks/            # Jupyter notebooks
+│   └── Train_UNet.ipynb # Training notebook
+├── tests/               # Unit tests
+├── models/              # Saved model checkpoints
+│   └── best_model-3.pth
+├── docs/                # Documentation
+│   └── images/         # Documentation assets
+├── configs/            # Configuration files
+├── requirements.txt    # Dependencies
+└── setup.py           # Package setup
 ```
 
 ---
@@ -60,8 +70,10 @@ The trained model can be downloaded from Google Drive:
 ⚠️ Place the model file (`best_model-3.pth`) inside the `models/` folder before running:
 
 ```bash
-streamlit run app.py
+# Run the Streamlit app
+streamlit run src/app/main.py
 
+# Features:
 - Upload a raw input image  
 - Get corrected output side-by-side with the original  
 - Option to download corrected image  
@@ -71,7 +83,7 @@ streamlit run app.py
 ## 📷 Example Results
 | Raw Input | Corrected Output |
 |---------------|---------------|
-| ![raw](docs/raw_example.jpg) | ![corrected](docs/corrected_example.png) |
+| ![raw](docs/images/raw_example.jpg) | ![corrected](docs/images/corrected_example.png) |
 
 ---
 

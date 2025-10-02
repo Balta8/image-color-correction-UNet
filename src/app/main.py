@@ -7,7 +7,7 @@ import torch.nn as nn
 import torchvision.transforms as T
 from PIL import Image
 import streamlit as st
-from UNet import UNet
+from src.models.unet import UNet
 
 # -------------------------
 @st.cache_resource(show_spinner=False)
@@ -77,7 +77,7 @@ st.markdown("Upload a RAW image and the model will return a color-corrected vers
 
 # ================= Model Input Settings =================
 st.sidebar.header("Model / Inference settings")
-checkpoint_path = st.sidebar.text_input("Checkpoint path", value="models/best_model.pth")
+checkpoint_path = st.sidebar.text_input("Checkpoint path", value="/Users/ahmedbalta/Desktop/Projects/Image_Color_Correction/models/best_model-3.pth")
 
 use_gpu = st.sidebar.checkbox("Use GPU (if available)", value=True)
 device_name = "cuda" if (use_gpu and torch.cuda.is_available()) else "cpu"
