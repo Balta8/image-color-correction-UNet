@@ -72,12 +72,12 @@ The trained model can be downloaded from Google Drive:
 ```bash
 # Run the Streamlit app
 streamlit run src/app/main.py
-
+```
+---
 # Features:
 - Upload a raw input image  
 - Get corrected output side-by-side with the original  
 - Option to download corrected image  
-```
 ---
 
 ## 📷 Example Results
